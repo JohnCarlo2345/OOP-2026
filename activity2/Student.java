@@ -5,13 +5,14 @@ public class Student {
     String lastName;
     String gender;
     String email;
-
     public int studentTotal = 0;
-
-    public student(String studentId, String firstName, String lastName, String gender, String email) {
+    public Student(String studentId, String firstName, String lastName, String gender, String email) {
         this.studentId = studentId;
         this.firstName = firstName;
         this.middleName = middleName;
-        this.lastName = 
+        this.lastName = lastName;
+        this.gender = gender;
+        this.email = email;
     }
+    
 }
