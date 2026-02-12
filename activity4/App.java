@@ -90,9 +90,34 @@ public class App {
             case 1:
                 System.out.println("Current Balance: " + account.getBalance());
                 break;
+            case 2:
+                System.out.println("Enter deposit amount: ");
+                double deposit = sc.nextDouble();
+                if (deposit > 0) {
+                    account.deposit(deposit);
+                    System.out.println("Deposit done.");
+                } else {
+                    System.out.println("Amount most be positive.");
+                }
+                break;
+            case 3:
+                System.out.println("Enter withdrawal amount: ");
+                double withdraw = sc.nextDouble();
+                if (withdraw > 0 && withdraw <= account.getBalance()) {
+                    account.withdraw(withdraw);
+                    System.out.println("Withdraw done.");
+                } else {
+                    System.out.println("Invalid amount or insufficient funds.");
+                }
+                break;
+            case 0:
+                System.out.println("Exiting...");
+                break;
+            default:
+                System.out.println("Ivalid choice - check menu instruction");
         }
     }
-
+    
     public static void  loadAccounts(ArrayList<BankAccount> accounts){
         try(Scanner reader = new Scanner(new File("accounts.csv"))){
             reader.nextLine(); //skip the header
