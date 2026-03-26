@@ -1,5 +1,6 @@
 package com.persistantemployee.model;
 
-public class EmployeeType {
-    
+public enum EmployeeType {
+    SALARIED,
+    HOURLY
 }

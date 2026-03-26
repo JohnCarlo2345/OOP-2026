@@ -10,4 +10,25 @@ public abstract class Employee {
         this.employeeId = employeeId;
         this.type = type;
     }
+
+    public abstract double calculateEarnings();
+
+    @Override
+    public String toString() {
+        return "Name: " + name + ", Employee ID: " + employeeId + ", Type: " + type;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Employee employee = (Employee) o;
+        return employeeId.equals(employee.employeeId);
+    }
+
+    // Getters (needed for JSON serialization/deserialization)
+    public String getName() { return name; }
+    public String getEmployeeId() { return employeeId; }
+    public EmployeeType getType() { return type; }
 }
+
