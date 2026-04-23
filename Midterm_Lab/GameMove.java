@@ -6,11 +6,13 @@ public abstract class GameMove {
 
     public GameMove(String name) {
         this.moveName = name;
+        
     }
 
 
     public String getMoveName() { return moveName; }
     public abstract int compare(GameMove other);
+
 }
 
 
@@ -20,6 +22,7 @@ class Rock extends GameMove {
         if (other instanceof Scissors) return 1;
         if (other instanceof Paper) return -1;
         return 0;
+
     }
 }
 
@@ -30,6 +33,7 @@ class Paper extends GameMove {
         if (other instanceof Rock) return 1;
         if (other instanceof Scissors) return -1;
         return 0;
+
     }
 }
 
@@ -40,6 +44,7 @@ class Scissors extends GameMove {
         if (other instanceof Paper) return 1;
         if (other instanceof Rock) return -1;
         return 0;
+
     }
 }
 
