@@ -1,3 +1,4 @@
+package com.persistantemployee.model;
 public class SalariedEmployee extends Employee {
     private double baseSalary;
     private double bonus;
