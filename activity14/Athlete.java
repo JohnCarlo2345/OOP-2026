@@ -1,5 +1,5 @@
 package activity14;
 
-public class Generic {
+public class Athlete {
 
 }
