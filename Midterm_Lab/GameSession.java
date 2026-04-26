@@ -1,5 +1,3 @@
-package activity13;
-
 public class GameSession {
     private Player p1;
     private Player p2;

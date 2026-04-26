@@ -1,5 +1,3 @@
-package activity13;
-
 public abstract class GameMove {
     private String moveName;
 
